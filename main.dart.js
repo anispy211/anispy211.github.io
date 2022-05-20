@@ -64208,7 +64208,7 @@ p=b.E(p).f
 s=q.c?B.i:B.E.h(0,900)
 return A.b8(r,A.uc(A.bW(A.a([new A.e9("Developed in \ud83d\udc99 with ",A.bx(q.c?B.k:B.i,r,B.aV,r,r),r,r),A.po(!1,!0,B.Mb,r,!0,r,r,r,r,r,r,r,r,r,new A.VX(),r,r,r)],t.p),B.t,B.p,B.a7),r,r),s,r,o*0.07,new A.ay(0,o*0.05,0,0),r,p.a.a)}}
 A.VX.prototype={
-$0(){return A.iZ("https://github.com/mhmzdev/DevFolio")},
+$0(){return A.iZ("https://github.com/anispy211")},
 $S:0}
 A.q0.prototype={
 au(){return new A.Hy(B.l)}}
