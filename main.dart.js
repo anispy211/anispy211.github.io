@@ -63946,7 +63946,7 @@ for(j=d*0.035,i=c*0.005,h=0;h<6;++h)k[h]=new A.lm(new A.qK(B.fQ[h],B.fT[h],j,i,g
 return A.aP(A.iE(B.b2,A.a([s,A.b8(g,A.d4(A.a([p,n,new A.e9("Aniruddha",m,g,g),new A.e9("Kadam",l,g,g),new A.i4(e,B.aR,B.cf,B.FD,g),o,A.bW(k,B.t,B.p,B.a7)],q),B.b4,B.p,B.x),g,g,g,new A.ay(r,d*0.2,r,0),g,g)],q),B.bz),d-50,c)}}
 A.Fx.prototype={
 G(a,b){var s,r,q,p,o,n,m,l,k,j,i=null,h=A.dw(b,t.A),g=t.w,f=b.E(g).f.a.b,e=b.E(g).f.a.a
-g=A.pY(0,A.GI(!1,A.ae4(A.j3(440),A.fq("assets/1.png",i,f*0.55)),0.9),i,i,i,-e*0.25,i,i)
+g=A.pY(20,A.GI(!1,A.ae4(A.j3(440),A.fq("assets/1.png",i,f*0.35)),0.9),i,i,i,e*0.2,i,i)
 s=t.p
 r=A.bW(A.a([A.fq("assets/hi.gif",i,f*0.19)],s),B.t,B.p,B.a7)
 q=A.aP(i,f*0.01,i)
@@ -63958,7 +63958,7 @@ m=A.bW(A.a([B.fD,A.afj(!0,B.ce,B.Ct,A.bx(h.c?B.k:B.i,n,B.bs,i,i))],s),B.t,B.p,B.
 l=A.aP(i,f*0.035,i)
 k=A.a([],s)
 for(j=0;j<6;++j)k.push(new A.qK(B.fQ[j],B.fT[j],n,2,i))
-return A.aP(A.iE(B.b2,A.a([g,A.b8(i,A.d4(A.a([r,q,o,p,m,l,A.bW(k,B.t,B.p,B.a7)],s),B.b4,B.p,B.x),i,i,i,new A.ay(e*0.07,f*0.12,0,0),i,i)],s),B.bz),f,e)}}
+return A.aP(A.iE(B.b2,A.a([g,A.b8(i,A.d4(A.a([r,q,o,p,m,l,A.bW(k,B.t,B.p,B.a7)],s),B.b4,B.p,B.x),i,i,i,new A.ay(e*0.07,f*0.06,0,0),i,i)],s),B.bz),f,e)}}
 A.Fz.prototype={
 G(a,b){var s,r,q,p,o,n,m,l,k,j,i,h,g=null,f=A.dw(b,t.A),e=t.w,d=b.E(e).f.a.b,c=b.E(e).f.a.a
 e=c<740
