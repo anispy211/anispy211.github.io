@@ -15,7 +15,7 @@
      "catgory_name": "Song",
      "catgory_id": "3",
      "catgory_icon": "img_name",
-     "category_detail_url": "/Song.json"
+     "category_detail_url": "/song.json"
   },
   {
     "catgory_name": "Parenting",
