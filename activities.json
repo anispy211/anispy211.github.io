@@ -1,353 +1,80 @@
 [
-  {
-    "No ": 1,
-    "ACTIVITY": "कडधान्याला मोड आणणे",
-    "Link": "https:\/\/youtu.be\/0ryxMViU9bI",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 2,
-    "ACTIVITY": "कपड्यांच्या घड्या घालूया ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 3,
-    "ACTIVITY": "काय ऐकल?",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 4,
-    "ACTIVITY": "कोण नाही ते ओळखा",
-    "Link": "https:\/\/youtu.be\/i3U9rKf64Rs",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 5,
-    "ACTIVITY": "खेळ गरम गार ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 6,
-    "ACTIVITY": "खेळ- चिमणी भुरर ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 7,
-    "ACTIVITY": "खेळ- जादूची पिशवी ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 8,
-    "ACTIVITY": "चहा करणे ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 9,
-    "ACTIVITY": "गोलंदाजी करणे ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 10,
-    "ACTIVITY": "टाळ्या आणि चुटक्यांचा आकृतीबंध (pattern )",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 11,
-    "ACTIVITY": "तरंगणे बुडणे",
-    "Link": "https:\/\/youtu.be\/00FmcjJNecU",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 12,
-    "ACTIVITY": "नमूना तयार करणे  ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 13,
-    "ACTIVITY": "भावनांची ओळख - माझे तुला काय आवडते ",
-    "Link": "https:\/\/youtu.be\/LtdcgZeQHSA",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 14,
-    "ACTIVITY": "मागे- पुढे ",
-    "Link": "https:\/\/youtu.be\/X0f4V3B0PqQ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 15,
-    "ACTIVITY": "रंग ओळखा ",
-    "Link": "https:\/\/youtu.be\/wtOx2bpGYSc",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 16,
-    "ACTIVITY": "विरघळणे न विरघळणे",
-    "Link": "https:\/\/youtu.be\/ubvADL41X5I",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 17,
-    "ACTIVITY": "वेगळे कोण ",
-    "Link": "https:\/\/youtu.be\/xEJTeuvnfEM",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 18,
-    "ACTIVITY": "स्पर्शाची ओळख ",
-    "Link": "https:\/\/youtu.be\/fquRAJdux78",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 19,
-    "ACTIVITY": "कोलाज\nCollage",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 20,
-    "ACTIVITY": "गाण्यावर मुक्त नाच - नाशिक ढोल\/फ्युजन ",
-    "Link": "https:\/\/youtu.be\/qPHD0KjcYvQ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 21,
-    "ACTIVITY": "चित्र काढू ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 22,
-    "ACTIVITY": "ठसेकाम  - काडेपेटीला दोरा लावून",
-    "Link": "https:\/\/youtu.be\/LUb6Onmg-EE",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 23,
-    "ACTIVITY": "पानांनी चित्रकला",
-    "Link": "https:\/\/youtu.be\/-q8cKqe02HQ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 24,
-    "ACTIVITY": " पहिला आवाज  - अवयवांच्या नावातील पहिला आवाज ",
-    "Link": "https:\/\/youtu.be\/ai7ofew8Owo",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 25,
-    "ACTIVITY": " पहिला आवाज  - कीटकांच्या नावातील पहिला आवाज ",
-    "Link": "https:\/\/youtu.be\/chl95EQ39RQ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 26,
-    "ACTIVITY": " पहिला आवाज  - गोड पदार्थांच्या नावातील पहिला आवाज ",
-    "Link": "https:\/\/youtu.be\/vr27MLcMJEI",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 27,
-    "ACTIVITY": " पहिला आवाज  - घरातिल व्यक्तिंच्या नावातील ",
-    "Link": "https:\/\/youtu.be\/f-TIi9_cPh4",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 28,
-    "ACTIVITY": " पहिला आवाज  - पातळ पदार्थांच्या नावातील पहिला आवाज ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 29,
-    "ACTIVITY": " पहिला आवाज  - फळांच्या  नावातील पहिला आवाज ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 30,
-    "ACTIVITY": " पहिला आवाज  - फुलांच्या नावातील पहिला आवाज ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 31,
-    "ACTIVITY": " पहिला आवाज  - भाज्यांच्या  नावातील पहिला आवाज ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 32,
-    "ACTIVITY": " पहिला आवाज  - वाहनांच्या नावातिल ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 33,
-    "ACTIVITY": " पहिला आवाज ओळखुया - पक्ष्यांच्या  नावातील पहिला आवाज ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 34,
-    "ACTIVITY": " पहिला आवाज ओळखुया - प्राण्यांच्या नावातील पहिला आवाज ",
-    "Link": "https:\/\/youtu.be\/CewOnLH542Y",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 35,
-    "ACTIVITY": " शब्द सांगा पहिला आवाज ओळखा ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 36,
-    "ACTIVITY": "आपला खेळ मांडूया",
-    "Link": "https:\/\/youtu.be\/1JCFykMicqw",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 37,
-    "ACTIVITY": "कपड्यांच्या घड्या घालूया ",
-    "Link": "https:\/\/youtu.be\/SQCu6RcqfFI",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 38,
-    "ACTIVITY": "खेळ - नारळ, आंबा, डाळिंब ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 39,
-    "ACTIVITY": "खेळ- बूट,टोपी,चष्मा",
-    "Link": "https:\/\/youtu.be\/lMzXXSlTTzM",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 40,
-    "ACTIVITY": "चित्रवाचन",
-    "Link": "https:\/\/youtu.be\/Gs2d88Mrr10",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 41,
-    "ACTIVITY": "चित्रांवर गप्पा - भाग २",
-    "Link": "https:\/\/youtu.be\/uY0sF6dJRQY",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 42,
-    "ACTIVITY": "चित्रांवर गप्पा - भाग ३",
-    "Link": "https:\/\/youtu.be\/agMCzcEUHgg",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 43,
-    "ACTIVITY": "चित्रांवर गप्पा -भाग १",
-    "Link": "https:\/\/youtu.be\/aDdAmdJFQGU",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 44,
-    "ACTIVITY": "जिभेचा खेळ",
-    "Link": "https:\/\/youtu.be\/cVl8d6CkFPg",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 45,
-    "ACTIVITY": "टेलीफोन तयार करू.. आवाज ऐकू ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 46,
-    "ACTIVITY": "संवाद  - तुझे मित्र मैत्रिणी ",
-    "Link": "https:\/\/youtu.be\/rw6nSjd1Q-s",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 47,
-    "ACTIVITY": "पहिला आवाज  - स्वयंपाकघरातील वस्तुंच्या नावातील पहिला आवाज ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 48,
-    "ACTIVITY": "पेन कागदाचा खेळ ",
-    "Link": "https:\/\/youtu.be\/Z2EasVfmqSc",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 49,
-    "ACTIVITY": "प्राण्यांच्या चाली ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 50,
-    "ACTIVITY": "भेळ करुया !!",
-    "Link": "https:\/\/youtu.be\/SKiGauGg11k",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 51,
-    "ACTIVITY": "मला माझी जोडी द्या",
-    "Link": "https:\/\/youtu.be\/jE8_qvtD3Ew",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 52,
-    "ACTIVITY": "माझा विचार माझी कृती",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 53,
-    "ACTIVITY": "मुक्त संवाद - हिवाळा",
-    "Link": "https:\/\/youtu.be\/jw8nx_imj3k",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 54,
-    "ACTIVITY": "वस्तु गोळा करूया \"प\"",
-    "Link": "https:\/\/www.youtube.com\/watch?v=f9of4LNn-gE",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 55,
-    "ACTIVITY": "खेळ वार व महिने ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 56,
-    "ACTIVITY": "ही वाहने कुठे दिसतात",
-    "Link": "https:\/\/youtu.be\/-meYWSm31FM",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 57,
-    "ACTIVITY": "शब्द सांगा ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 58,
-    "ACTIVITY": "शब्दकोडी - अन्नपदार्थ ",
-    "Link": "https:\/\/youtu.be\/Wus_ocHL5J0",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 59,
-    "ACTIVITY": "शब्दकोडी - पक्षी ",
-    "Link": "https:\/\/youtu.be\/Mf96oEC0gvc",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 60,
-    "ACTIVITY": "शब्दकोडी- स्वयंपाकघरातील वस्तू",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 61,
-    "ACTIVITY": "शब्दकोडे - प्राणी ",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 62,
-    "ACTIVITY": "शब्दकोडे-फळे",
-    "Link": "https:\/\/youtu.be\/vhBWdWnmdtk",
-    "Language": "Marathi"
-  },
-  {
-    "No ": 63,
-    "ACTIVITY": "शब्दकोडे-वाहने ",
-    "Link": " ",
-    "Language": "Marathi"
-  }
-]
+    {
+      "No ": 1,
+      "Language": "Marathi",
+      "ACTIVITY": "आकार रचना",
+      "Link": "https:\/\/youtu.be\/pdJIm0MeJUQ"
+    },
+    {
+      "No ": 2,
+      "Language": "Marathi",
+      "ACTIVITY": "कोलाज",
+      "Link": "https:\/\/youtu.be\/VZG4lcDlj0I"
+    },
+    {
+      "No ": 3,
+      "Language": "Marathi",
+      "ACTIVITY": "चला तयार करूया कागदी वस्तू",
+      "Link": "https:\/\/youtu.be\/NQZqHj7AspY"
+    },
+    {
+      "No ": 4,
+      "Language": "Marathi",
+      "ACTIVITY": "चित्र काढू",
+      "Link": "https:\/\/youtu.be\/jof1AwBAIog"
+    },
+    {
+      "No ": 5,
+      "Language": "Marathi",
+      "ACTIVITY": "ठसेकाम - काडेपेटीला दोरा लावून",
+      "Link": "https:\/\/youtu.be\/LUb6Onmg-EE"
+    },
+    {
+      "No ": 6,
+      "Language": "Marathi",
+      "ACTIVITY": "ठसेकाम - दोऱ्याचे",
+      "Link": "https:\/\/youtu.be\/s5MeCj5rbhU"
+    },
+    {
+      "No ": 7,
+      "Language": "Marathi",
+      "ACTIVITY": "ठसेकाम - बोटांचे",
+      "Link": "https:\/\/youtu.be\/kss3tf5ebr0"
+    },
+    {
+      "No ": 8,
+      "Language": "Marathi",
+      "ACTIVITY": "नमूना तयार करणे",
+      "Link": "https:\/\/youtu.be\/pFP0Ll6xRTw"
+    },
+    {
+      "No ": 9,
+      "Language": "Marathi",
+      "ACTIVITY": "पानांनी चित्रकला",
+      "Link": "https:\/\/youtu.be\/fOAg0Hik59k"
+    },
+    {
+      "No ": 10,
+      "Language": "Marathi",
+      "ACTIVITY": "पानांनी चित्रकला",
+      "Link": "https:\/\/youtu.be\/-q8cKqe02HQ"
+    },
+    {
+      "No ": 11,
+      "Language": "Marathi",
+      "ACTIVITY": "माझा विचार माझी कृती",
+      "Link": "https:\/\/youtu.be\/nrKOVHiKsvk"
+    },
+    {
+      "No ": 12,
+      "Language": "Marathi",
+      "ACTIVITY": "मुखवटे तयार करणे",
+      "Link": "https:\/\/youtu.be\/FFS8mTCdjW4"
+    },
+    {
+      "No ": 13,
+      "Language": "Marathi",
+      "ACTIVITY": "सुशोभन",
+      "Link": "https:\/\/youtu.be\/3RZeEnAnpKM"
+    }
+  ]
