@@ -69,6 +69,32 @@
     "catgory_name": "हिंदी गतिविधी ",
     "catgory_id": "12",
     "catgory_icon": "hindi",
-    "category_detail_url": "/rozZopGosht.json"
+    "category_detail_url": "/rozZopGosht.json",
+    "category_Detail": [
+      {
+        "catgory_name": "खेल खेल में",
+        "catgory_id": "121",
+        "catgory_icon": "khel_majeche",
+        "category_detail_url": "/odkha.json"
+      },
+      {
+        "catgory_name": "कहानी",
+        "catgory_id": "122",
+        "catgory_icon": "aikuya_goshti",
+        "category_detail_url": "/kalakruti.json"
+      },
+      {
+        "catgory_name": "गीत",
+        "catgory_id": "123",
+        "catgory_icon": "mhanuya_gani",
+        "category_detail_url": "/khelKheluya.json"
+      },
+      {
+        "catgory_name": "बच्चों की परवरिश",
+        "catgory_id": "124",
+        "catgory_icon": "gujagoshti_palakanshi",
+        "category_detail_url": "/khelKheluya.json"
+      }
+    ]
   }
 ]
