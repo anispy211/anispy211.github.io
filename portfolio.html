@@ -195,6 +195,30 @@
             justify-content: center;
             align-items: center;
             min-width: 250px;
+            position: relative;
+        }
+
+        .hero-image-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 8px;
+            background: var(--text-main);
+            box-shadow: 0 0 15px var(--text-main);
+            transform: rotate(45deg) translateY(-500px);
+            opacity: 0;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .hero-image-container:hover::before {
+            animation: swordSlice 0.3s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+        }
+
+        .hero-image-container:hover .hero-image {
+            animation: imageSplit 0.3s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
         }
 
         .hero-image {
@@ -206,6 +230,7 @@
             max-height: 450px;
             object-fit: cover;
             background-color: var(--bg-color);
+            transition: all 0.3s ease;
         }
 
         .hero h1 {
@@ -664,6 +689,39 @@
                 transform: scale(1) translateY(0);
             }
         }
+
+        @keyframes swordSlice {
+            0% {
+                transform: rotate(45deg) translateY(-500px);
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+                height: 12px;
+            }
+
+            100% {
+                transform: rotate(45deg) translateY(500px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes imageSplit {
+            0% {
+                transform: skew(-2deg) translate(0, 0);
+            }
+
+            50% {
+                transform: skew(-2deg) translate(-8px, 8px);
+                filter: brightness(1.3) contrast(1.2);
+            }
+
+            100% {
+                transform: skew(-2deg) translate(-4px, 4px);
+                filter: brightness(1) contrast(1);
+            }
+        }
     </style>
 </head>
 
@@ -892,6 +950,10 @@
                                 <li>Monetize direct messages and meetings.</li>
                             </ul>
                         </div>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://www.trypingbox.com/" target="_blank" rel="noopener" class="btn">View
+                            Project</a>
                     </div>
                 </div>
 
