@@ -15,16 +15,13 @@
 
     <style>
         :root {
-            /* Glassmorphism Variables */
-            --glass-bg: rgba(255, 255, 255, 0.15);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-
-            /* Typography Colors */
-            --text-light: #ffffff;
-            --text-dark: #2d3748;
-            --accent-brand: #ffffff;
-            /* White/Gray accent matching manga style */
+            /* Brutalist Manga Variables */
+            --bg-color: #000000;
+            --text-main: #ffffff;
+            --text-muted: #888888;
+            --border-color: #ffffff;
+            --border-width: 4px;
+            --shadow-offset: 8px;
         }
 
         * {
@@ -51,19 +48,24 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            filter: grayscale(100%) contrast(1.2) brightness(0.7);
+            filter: grayscale(100%) contrast(1.5) brightness(0.5);
             z-index: -1;
         }
 
-        /* Glass Panel Utility */
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            box-shadow: var(--glass-shadow);
+        /* Screentone Texture */
+        .screentone {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(var(--text-muted) 1px, transparent 1px);
+            background-size: 4px 4px;
+        }
+
+        /* Manga Panel Utility */
+        .manga-panel {
+            background: var(--bg-color);
+            border: var(--border-width) solid var(--border-color);
+            box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
             padding: 2.5rem;
+            position: relative;
         }
 
         /* Typography */
@@ -213,19 +215,13 @@
             margin-bottom: 2rem;
             display: inline-block;
             position: relative;
-        }
-
-        .section-header::after {
-            content: '';
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            width: 100%;
-            height: 12px;
-            background: var(--accent-brand);
-            opacity: 0.5;
-            z-index: -1;
-            border-radius: 6px;
+            text-transform: uppercase;
+            transform: skew(-2deg);
+            color: var(--bg-color);
+            background: var(--text-main);
+            padding: 0.5rem 1rem;
+            border: var(--border-width) solid var(--border-color);
+            box-shadow: 6px 6px 0 var(--border-color);
         }
 
         /* Hero / About */
@@ -276,9 +272,9 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background: var(--accent-brand);
+            background: var(--text-main);
             transform: translateX(-50%);
-            box-shadow: 0 0 10px var(--accent-brand);
+            border: 2px solid var(--border-color);
         }
 
         .job-header {
@@ -345,9 +341,9 @@
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-6px, -6px);
+            box-shadow: 14px 14px 0 var(--text-muted);
+            background: var(--bg-color);
         }
 
         .project-title {
@@ -363,24 +359,25 @@
         .btn {
             display: inline-block;
             padding: 12px 28px;
-            background: linear-gradient(135deg, var(--text-light), #999999);
-            color: #1a1a1a;
+            background: var(--text-main);
+            color: var(--bg-color);
             text-decoration: none;
             font-family: 'Outfit', sans-serif;
             font-weight: 800;
             font-size: 1.1rem;
-            border-radius: 30px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            border: var(--border-width) solid var(--text-main);
+            box-shadow: 6px 6px 0 var(--text-muted);
+            transform: skew(-5deg);
+            transition: all 0.2s ease;
             cursor: pointer;
-            border: none;
             margin-top: 1.5rem;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
-            background: linear-gradient(135deg, #999999, var(--text-light));
+            transform: skew(-5deg) translate(-2px, -2px);
+            box-shadow: none;
+            background: var(--bg-color);
+            color: var(--text-main);
         }
 
         /* Skills */
@@ -392,8 +389,10 @@
 
         .skill-group h3 {
             font-size: 1.4rem;
-            color: var(--accent-brand);
+            color: var(--text-main);
             margin-bottom: 1rem;
+            border-bottom: var(--border-width) solid var(--border-color);
+            padding-bottom: 8px;
         }
 
         /* Mobile Menu */
