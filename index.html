@@ -13,10 +13,11 @@
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
   -->
   <base href="/">
-  
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Sesoned mobile application developer, technical writer and open source contributor.">
+  <meta name="description"
+    content="Sesoned mobile application developer, technical writer and open source contributor.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -81,6 +82,30 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
+
+    .social-links {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-links a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .social-links a:hover {
+      color: #e64230;
+    }
   </style>
 
 </head>
@@ -94,6 +119,14 @@
         <div></div>
         <div></div>
       </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://github.com/anispy211" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/aniruddha-kadam-886b5322" target="_blank"
+        rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://twitter.com/anispy" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://www.instagram.com/anispy211" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
   </div>
   <!-- This script installs service_worker.js to provide PWA functionality to
