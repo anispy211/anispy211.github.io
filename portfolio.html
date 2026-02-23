@@ -237,6 +237,41 @@
             flex-wrap: wrap;
         }
 
+        .hero-socials {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-socials a {
+            color: var(--text-main);
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-socials a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 4px;
+            background: var(--text-main);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-socials a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
         /* Sections General */
         section {
             padding: 6rem 2rem;
@@ -660,6 +695,14 @@
                         <a href="#experience" class="btn">View Experience</a>
                         <a href="mailto:aniruddhagkadam@gmail.com" class="btn btn-outline border-element"
                             style="background-color: var(--bg-color);">Contact Me</a>
+                    </div>
+                    <div class="hero-socials fade-in delay-3">
+                        <a href="https://github.com/anispy211" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/aniruddha-kadam-886b5322" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://twitter.com/anispy" target="_blank" rel="noopener noreferrer">Twitter</a>
+                        <a href="https://www.instagram.com/anispy211" target="_blank"
+                            rel="noopener noreferrer">Instagram</a>
                     </div>
                 </div>
                 <div class="hero-image-container fade-in delay-2">
