@@ -7,23 +7,23 @@
     <title>Aniruddha Kadam - Engineering Manager Portfolio</title>
     <meta name="description"
         content="Portfolio of Aniruddha Kadam, Engineering Manager with 14+ years of experience leading development of scalable mobile and platform solutions.">
-    <!-- Google Fonts: Inter for clean typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Space Grotesk for blocky anime/manga typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #fcfcfc;
-            --text-main: #111111;
-            --text-muted: #555555;
-            --border-color: #eaeaea;
-            --accent-color: #222222;
+            --bg-color: #ffffff;
+            --text-main: #000000;
+            --text-muted: #444444;
+            --border-color: #000000;
+            --accent-color: #000000;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #121212;
-                --text-main: #efefef;
-                --text-muted: #a0a0a0;
-                --border-color: #333333;
+                --bg-color: #0f0f0f;
+                --text-main: #ffffff;
+                --text-muted: #cccccc;
+                --border-color: #ffffff;
                 --accent-color: #ffffff;
             }
         }
@@ -35,85 +35,134 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            /* Manga screentone background effect */
+            background-image: radial-gradient(var(--text-muted) 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+            background-attachment: fixed;
         }
 
         /* Layout */
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: var(--bg-color);
+            border: 4px solid var(--border-color);
+            /* Hard anime/manga block shadow */
+            box-shadow: 16px 16px 0 var(--text-main);
+            position: relative;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 1px solid var(--text-main);
+            pointer-events: none;
         }
 
         header {
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
+            border-bottom: 4px dashed var(--border-color);
+            padding-bottom: 2rem;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+            margin-bottom: 0.75rem;
+            /* Stroke effect */
+            text-shadow: 3px 3px 0 var(--text-muted), -1px -1px 0 var(--bg-color);
+            transform: skew(-2deg);
         }
 
         .subtitle {
-            font-size: 1.125rem;
-            color: var(--text-muted);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: var(--text-main);
+            color: var(--bg-color);
+            display: inline-block;
+            padding: 6px 14px;
             margin-bottom: 1.5rem;
-            font-weight: 300;
+            transform: skew(-5deg);
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            font-size: 0.875rem;
+            font-size: 0.95rem;
+            font-weight: 700;
         }
 
         .contact-info a {
-            color: var(--text-muted);
+            color: var(--text-main);
             text-decoration: none;
-            transition: color 0.2s ease;
+            border-bottom: 3px solid var(--text-main);
+            transition: all 0.2s ease;
         }
 
         .contact-info a:hover {
-            color: var(--accent-color);
+            background-color: var(--text-main);
+            color: var(--bg-color);
         }
 
         section {
             margin-bottom: 4rem;
+            position: relative;
+            padding: 2rem;
+            border: 3px solid var(--border-color);
+            background: var(--bg-color);
+            box-shadow: 8px 8px 0 var(--text-muted);
         }
 
         h2 {
-            font-size: 1.25rem;
+            font-size: 1.75rem;
             text-transform: uppercase;
+            font-weight: 700;
             letter-spacing: 0.05em;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            font-weight: 500;
+            color: var(--bg-color);
+            background-color: var(--text-main);
+            display: inline-block;
+            padding: 6px 16px;
+            margin-top: -3.5rem;
+            /* pull up over the border */
+            margin-bottom: 1.5rem;
+            transform: skew(-10deg);
+            border: 2px solid var(--bg-color);
         }
 
         /* Summary */
         .summary p {
             margin-bottom: 1rem;
-            font-size: 1rem;
-            color: var(--text-main);
-            font-weight: 300;
+            font-size: 1.15rem;
+            font-weight: 600;
         }
 
         /* Experience & Projects */
         .item {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px dotted var(--border-color);
         }
 
         .item:last-child {
             margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
         .item-header {
@@ -125,20 +174,27 @@
         }
 
         .item-title {
-            font-size: 1.125rem;
-            font-weight: 600;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
         }
 
         .item-meta {
-            font-size: 0.875rem;
+            font-size: 0.95rem;
+            font-weight: 700;
             color: var(--text-muted);
         }
 
         .item-role {
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 0.75rem;
-            color: var(--text-main);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--bg-color);
+            background: var(--text-muted);
+            display: inline-block;
+            padding: 4px 10px;
+            transform: skew(-5deg);
         }
 
         .item-content ul {
@@ -147,16 +203,18 @@
 
         .item-content li {
             position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            font-size: 1.05rem;
         }
 
         .item-content li::before {
-            content: "•";
+            content: "►";
             position: absolute;
             left: 0;
+            font-size: 1em;
+            top: 0.1em;
             color: var(--text-main);
         }
 
@@ -173,39 +231,63 @@
             }
         }
 
+        .skill-group {
+            border: 3px solid var(--border-color);
+            padding: 1.25rem;
+            box-shadow: 6px 6px 0 var(--border-color);
+            background: var(--bg-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skill-group:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0 var(--text-muted);
+        }
+
         .skill-group h3 {
-            font-size: 0.875rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            border-bottom: 3px solid var(--border-color);
+            padding-bottom: 6px;
         }
 
         .skill-group p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.8;
         }
 
         /* Links */
         .project-link {
             display: inline-block;
-            margin-top: 0.5rem;
-            font-size: 0.875rem;
-            color: var(--accent-color);
+            margin-top: 1.25rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--bg-color);
+            background: var(--text-main);
+            padding: 8px 20px;
             text-decoration: none;
-            border-bottom: 1px solid var(--border-color);
-            transition: border-color 0.2s ease;
+            border: 3px solid var(--text-main);
+            transition: all 0.2s ease;
+            box-shadow: 4px 4px 0 var(--text-muted);
+            transform: skew(-5deg);
         }
 
         .project-link:hover {
-            border-color: var(--accent-color);
+            background: var(--bg-color);
+            color: var(--text-main);
+            box-shadow: none;
+            transform: skew(-5deg) translate(4px, 4px);
         }
 
         /* Animation */
         .fade-in {
-            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: comicPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
             opacity: 0;
-            transform: translateY(10px);
+            transform: scale(0.95) translateY(20px);
         }
 
         .delay-1 {
@@ -228,10 +310,10 @@
             animation-delay: 0.5s;
         }
 
-        @keyframes fadeIn {
+        @keyframes comicPop {
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: scale(1) translateY(0);
             }
         }
     </style>
