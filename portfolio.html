@@ -23,8 +23,8 @@
             /* Typography Colors */
             --text-light: #ffffff;
             --text-dark: #2d3748;
-            --accent-brand: #ff7e67;
-            /* Soft salmon/pink accent matching cherry blossoms */
+            --accent-brand: #ffffff;
+            /* White/Gray accent matching manga style */
         }
 
         * {
@@ -38,11 +38,21 @@
             color: var(--text-light);
             background-color: #1a1a1a;
             overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             background-image: url('assets/japanese_house_bg.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             background-repeat: no-repeat;
+            filter: grayscale(100%) contrast(1.2) brightness(0.7);
+            z-index: -1;
         }
 
         /* Glass Panel Utility */
@@ -312,7 +322,7 @@
         }
 
         .job-list li::before {
-            content: '🌸';
+            content: '✦';
             position: absolute;
             left: 0;
             top: 2px;
@@ -353,14 +363,14 @@
         .btn {
             display: inline-block;
             padding: 12px 28px;
-            background: linear-gradient(135deg, var(--accent-brand), #ff5e62);
-            color: white;
+            background: linear-gradient(135deg, var(--text-light), #999999);
+            color: #1a1a1a;
             text-decoration: none;
             font-family: 'Outfit', sans-serif;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 1.1rem;
             border-radius: 30px;
-            box-shadow: 0 4px 15px rgba(255, 126, 103, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
@@ -369,8 +379,8 @@
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 126, 103, 0.6);
-            background: linear-gradient(135deg, #ff5e62, var(--accent-brand));
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+            background: linear-gradient(135deg, #999999, var(--text-light));
         }
 
         /* Skills */
