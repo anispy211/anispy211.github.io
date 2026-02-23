@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniruddha Kadam - Engineering Manager Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Aniruddha Kadam, Engineering Manager with 14+ years of experience leading development of scalable mobile and platform solutions.">
+    <!-- Google Fonts: Inter for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --border-color: #eaeaea;
+            --accent-color: #222222;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-main: #efefef;
+                --text-muted: #a0a0a0;
+                --border-color: #333333;
+                --accent-color: #ffffff;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Summary */
+        .summary p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 300;
+        }
+
+        /* Experience & Projects */
+        .item {
+            margin-bottom: 2.5rem;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .item-meta {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .item-role {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .item-content ul {
+            list-style-type: none;
+        }
+
+        .item-content li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .item-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--text-main);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .skill-group h3 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-group p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Links */
+        .project-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border-color);
+            transition: border-color 0.2s ease;
+        }
+
+        .project-link:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-5 {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="fade-in delay-1">
+            <h1>Aniruddha Kadam</h1>
+            <div class="subtitle">Engineering Manager / Mobile Competency Lead</div>
+
+            <div class="contact-info">
+                <span>Pune, Maharashtra, India</span>
+                <span>•</span>
+                <a href="mailto:aniruddhagkadam@gmail.com">aniruddhagkadam@gmail.com</a>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/aniruddha-kadam-886b5322" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <span>•</span>
+                <a href="https://github.com/anispy211" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </header>
+
+        <section class="summary fade-in delay-2">
+            <h2>Summary</h2>
+            <p>Engineering Manager with 14+ years of experience leading development of scalable mobile and platform
+                solutions across mobile and backend ecosystems, with expertise spanning mobility, fintech-adjacent
+                platforms, and AI-driven products. Proven track record of architecting and launching 20+ applications,
+                improving release efficiency by up to 30% through modular architectures, CI/CD automation, and
+                engineering process optimization.</p>
+            <p>Currently leading mobile architecture initiatives at EY while also co-founding an AI startup focused on
+                LLM-powered data interaction platforms. Previously held leadership roles in Singapore-based mobility
+                startup environments, delivering IoT-connected mobile applications and platform SDKs.</p>
+            <p>Experienced in managing cross-functional teams (up to 12+ engineers), defining engineering strategy, and
+                collaborating with product stakeholders to deliver reliable, scalable user-facing systems. Strong
+                background in real-time integrations, distributed system interactions, and developer platform tooling.
+            </p>
+        </section>
+
+        <section class="experience fade-in delay-3">
+            <h2>Professional Experience</h2>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Ernst & Young</div>
+                    <div class="item-meta">May 2024 - Present • Remote</div>
+                </div>
+                <div class="item-role">Engineering Manager (Mobile Competency Team Lead)</div>
+                <div class="item-content">
+                    <ul>
+                        <li>Part of EY mobile competency team as Engineering Manager & Architect for native and cross
+                            platform solution for Flutter app for banking & supply chain domain.</li>
+                        <li>Lead a team of 5 developers for a banking app in Harmony OS.</li>
+                        <li>Supervising, managing, and motivating the UI/mobile development team.</li>
+                        <li>Architect defining the overall technical architecture for core banking solution.</li>
+                        <li>Conducting regular team reviews and one-on-one meetings. Setting engineering goals and
+                            focusing on people management to foster a supportive and productive environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">LightStep</div>
+                    <div class="item-meta">Feb 2024 - Present • Remote</div>
+                </div>
+                <div class="item-role">Co-Founder + CTO</div>
+                <div class="item-content">
+                    <ul>
+                        <li>Architected and led development of an LLM-powered AI interface that enables natural language
+                            querying over smart databases, tailored for SME use cases. <a
+                                href="https://golightstep.com/sq_nova.html" target="_blank" rel="noopener"
+                                class="project-link">View SQNova</a></li>
+                        <li>Built an intuitive chat-based AI assistant using Python, LangChain, and Django to automate
+                            operational queries and internal reporting.</li>
+                        <li>Spearheaded R&D initiatives to prototype AI tools for workflow automation, streamlining data
+                            processing and insights generation.</li>
+                        <li>Designed and delivered an AR-based mobile app that lets advertising agencies preview digital
+                            billboards in real-world environments using ARKit.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">SCOOTERSON</div>
+                    <div class="item-meta">March 2023 - April 2024 • Singapore</div>
+                </div>
+                <div class="item-role">Associate Engineering Manager + Product Management</div>
+                <div class="item-content">
+                    <ul>
+                        <li>Developed an iOS mobile app from scratch for EV vehicles and IoT Management and chat bot
+                            integration.</li>
+                        <li>Created Rental Solution App from scratch using flutter SDK.</li>
+                        <li>Developed AR demo app to visualize scooter in real world for exhibitions and demos.</li>
+                        <li>Responsible for Developing, Managing, and Documenting SDK for Internal apps interacting
+                            mostly with IoT hardware, CI/CD pipeline and automation process, and PRD specs.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">RIDECELL</div>
+                    <div class="item-meta">2019 - 2023 • Pune, India</div>
+                </div>
+                <div class="item-role">Associate Engineering Manager (IOS Development)</div>
+                <div class="item-content">
+                    <ul>
+                        <li>Developed an iOS mobile app from scratch for fleet management solution within 3 months.</li>
+                        <li>Responsible for Managing & mentoring mobile team of iOS and android (Team size: 12).</li>
+                        <li>Developed Firebase utility tool using flutter SDK web app for CI/CD pipeline. Quick POCs for
+                            customer (Payments/ Beacons).</li>
+                        <li>Automated Configuration management using Flutter, Fire Store(Firebase) and AWS (S3).</li>
+                        <li>Setting up CI/CD pipelines in Bitrise for QA/UAT/Prod environment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">SABA SOFTWARE</div>
+                    <div class="item-meta">2016 - 2019 • Pune, India</div>
+                </div>
+                <div class="item-role">Senior Software Engineer</div>
+                <div class="item-content">
+                    <ul>
+                        <li>Took initiative of code migration from Objective-C non-ARC code to the latest swift coding
+                            standards without breaking active development.</li>
+                        <li>Worked on multiple projects of Saba like Learning Management, Talent Management, Saba
+                            meetings, enterprise apps.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">PREVIOUS EXPERIENCE</div>
+                    <div class="item-meta">2011 - 2016 • Pune, India</div>
+                </div>
+                <div class="item-content">
+                    <ul>
+                        <li><strong>Zensar Technologies</strong>: Senior Developer (2015-2016). Developed Generic
+                            components, defined architecture, Push notification integration. Setup git repo environment,
+                            CI/CD, and mentored junior developers.</li>
+                        <li><strong>Codewalla Software</strong>: Team Lead & Software Engineer (2011-2015).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects fade-in delay-4">
+            <h2>Personal Projects</h2>
+
+            <div class="item">
+                <div class="item-title">Pingbox</div>
+                <div class="item-content">
+                    <ul>
+                        <li>Monetize direct messages and meetings.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">SQNova</div>
+                <div class="item-content">
+                    <ul>
+                        <li>LLM based Database interface chat AI.</li>
+                        <li>Built with LightStep.</li>
+                    </ul>
+                    <a href="https://golightstep.com/sq_nova.html" target="_blank" rel="noopener"
+                        class="project-link">View Project</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-title">IYKYK App</div>
+                <div class="item-content">
+                    <ul>
+                        <li>Secret Text messaging Privacy App.</li>
+                    </ul>
+                    <a href="https://brocodeapp.github.io" target="_blank" rel="noopener" class="project-link">View
+                        Website</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills fade-in delay-5">
+            <h2>Professional Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Technologies</h3>
+                    <p>iOS, Android, Unity 2D, Flutter, Flutter Web</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Programming Languages</h3>
+                    <p>Dart, Objective C, Swift, Kotlin, Python, C#, PHP, Golang</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Backend</h3>
+                    <p>PHP, Python, Django, Langchain, Postgres, LLM interface</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Architecture Patterns</h3>
+                    <p>MVC, MVVM, CLEAN</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Automation & CI/CD</h3>
+                    <p>Selenium, XCUI, Bitrise, Test Flight, Slack Webhooks, Circle CI</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Project Management</h3>
+                    <p>JIRA, Kanban Board, SCRUM, Trello, Clickup, GIT, SVN</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
