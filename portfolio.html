@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniruddha Kadam - Portfolio</title>
+
+    <!-- Google Fonts: Inter for clean UI, Outfit for expressive headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Glassmorphism Variables */
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+            /* Typography Colors */
+            --text-light: #ffffff;
+            --text-dark: #2d3748;
+            --accent-brand: #ff7e67;
+            /* Soft salmon/pink accent matching cherry blossoms */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-light);
+            background-color: #1a1a1a;
+            overflow-x: hidden;
+            background-image: url('assets/japanese_house_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Glass Panel Utility */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--glass-shadow);
+            padding: 2.5rem;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Layout Structure */
+        .page-wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 320px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-img-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            padding: 6px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .profile-img-container:hover .profile-img {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .nav-name {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-brand);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-brand);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex: 1;
+            margin-left: 320px;
+            padding: 4rem;
+            position: relative;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 6rem;
+            scroll-margin-top: 4rem;
+        }
+
+        .section-header {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: var(--accent-brand);
+            opacity: 0.5;
+            z-index: -1;
+            border-radius: 6px;
+        }
+
+        /* Hero / About */
+        .hero-panel {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text .highlight {
+            color: var(--accent-brand);
+        }
+
+        /* Timeline / Experience */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 30px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent-brand);
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px var(--accent-brand);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .job-company {
+            color: var(--accent-brand);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .job-meta {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .job-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .job-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .job-list li::before {
+            content: '🌸';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .project-content {
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--accent-brand), #ff5e62);
+            color: white;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(255, 126, 103, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            margin-top: 1.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 126, 103, 0.6);
+            background: linear-gradient(135deg, #ff5e62, var(--accent-brand));
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-group h3 {
+            font-size: 1.4rem;
+            color: var(--accent-brand);
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Animations */
+        .fade-up {
+            animation: fadeUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .sidebar {
+                width: 280px;
+                padding: 2rem 1.5rem;
+            }
+
+            .main-content {
+                margin-left: 280px;
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .mobile-header {
+                display: flex;
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                width: 100%;
+                z-index: 999;
+                padding-top: 6rem;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 6rem 1rem 2rem;
+            }
+
+            .section-header {
+                font-size: 2.5rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .glass-panel {
+                padding: 1.5rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="#about" class="mobile-logo">AK</a>
+        <button class="menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('active')">☰</button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div>
+            <div class="profile-section fade-up">
+                <div class="profile-img-container">
+                    <img src="assets/assets/1.png" alt="Aniruddha Kadam" class="profile-img">
+                </div>
+                <div class="nav-name">Aniruddha Kadam</div>
+                <div class="nav-title">Engineering Manager</div>
+            </div>
+
+            <div class="nav-links fade-up delay-1">
+                <a href="#about" onclick="closeSidebar()">About Me</a>
+                <a href="#experience" onclick="closeSidebar()">Experience</a>
+                <a href="#projects" onclick="closeSidebar()">Projects</a>
+                <a href="#skills" onclick="closeSidebar()">Skills</a>
+            </div>
+        </div>
+
+        <div class="social-links fade-up delay-2">
+            <a href="https://github.com/anispy211" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/aniruddha-kadam-886b5322" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com/anispy" target="_blank" rel="noopener">Twitter</a>
+            <a href="mailto:aniruddhagkadam@gmail.com">Email</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- About Section -->
+        <section id="about" class="fade-up delay-1">
+            <div class="glass-panel hero-panel">
+                <div class="hero-text">
+                    <h1>Building scalable <span class="highlight">mobile experiences</span> and engineering teams.</h1>
+                    <p style="margin-bottom: 1.5rem;">Hello! I'm Aniruddha Kadam, an Engineering Manager and Mobile Lead
+                        with 10 years of experience shaping Android architecture, leading cross-functional teams, and
+                        building high-performance applications used by millions.</p>
+                    <p>My passion lies in crafting beautiful, flawless user experiences while ensuring the underlying
+                        codebase is robust, testable, and scalable. Beyond coding, I focus on team growth, agile
+                        methodologies, and fostering a culture of technical excellence.</p>
+                    <a href="mailto:aniruddhagkadam@gmail.com" class="btn">Say Hello</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="fade-up delay-2">
+            <h2 class="section-header">Experience</h2>
+
+            <div class="timeline">
+
+                <!-- SQNova -->
+                <div class="glass-panel timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Technical Consultant</div>
+                            <div class="job-company">SQNova</div>
+                        </div>
+                        <div class="job-meta">Oct 2023 - Present</div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Directed transition to React Native for cross-platform efficiency, saving 20% in development
+                            costs.</li>
+                        <li>Guided mobile architecture adopting modern practices like Clean Code and SOLID principles.
+                        </li>
+                        <li>Mentored a team of 4 junior developers mapping out training and code-review structures.</li>
+                    </ul>
+                </div>
+
+                <!-- SCOOTERSON -->
+                <div class="glass-panel timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Engineering Manager • Mobile</div>
+                            <div class="job-company">SCOOTERSON</div>
+                        </div>
+                        <div class="job-meta">Nov 2021 - Aug 2023</div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Owned IoT integrations over BLE seamlessly linking the app to smart scooters.</li>
+                        <li>Designed the primary Flutter application architecture enabling rapid multi-platform deploys.
+                        </li>
+                        <li>Recruited and led a squad of 4 developers enforcing agile best practices.</li>
+                    </ul>
+                </div>
+
+                <!-- RIDECELL -->
+                <div class="glass-panel timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Mobile Lead</div>
+                            <div class="job-company">RIDECELL</div>
+                        </div>
+                        <div class="job-meta">Aug 2018 - Oct 2021</div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Pioneered Kotlin Multiplatform Mobile (KMM) drastically reducing code duplication across
+                            iOS/Android.</li>
+                        <li>Built robust SDK frameworks utilized by partner apps scaling the company's ecosystem.</li>
+                        <li>Spearheaded offline-first architectures syncing mission-critical ride data.</li>
+                    </ul>
+                </div>
+
+                <!-- SABA -->
+                <div class="glass-panel timeline-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Software Engineer</div>
+                            <div class="job-company">SABA SOFTWARE</div>
+                        </div>
+                        <div class="job-meta">April 2015 - Aug 2018</div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Overhauled the main Enterprise Android application improving crash-free rates.</li>
+                        <li>Implemented complex video playback solutions and background downloading modules.</li>
+                        <li>Integrated enterprise-grade security protocols for strict corporate environments.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-up delay-3">
+            <h2 class="section-header">Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Pingbox -->
+                <div class="glass-panel project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Pingbox</h3>
+                        <p>A platform designed to let creators and professionals monetize their direct messages and
+                            meetings efficiently.</p>
+                        <ul class="job-list" style="margin-top: 1rem;">
+                            <li>Payment Gateway Integration</li>
+                            <li>Real-time chat infrastructure</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.trypingbox.com/" target="_blank" rel="noopener" class="btn"
+                        style="text-align: center;">View Project</a>
+                </div>
+
+                <!-- SCOOTERSON APP -->
+                <div class="glass-panel project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Scooterson App</h3>
+                        <p>The companion app for intelligent kick-scooters allowing keyless unlocking, ride telemetry,
+                            and fleet management.</p>
+                        <ul class="job-list" style="margin-top: 1rem;">
+                            <li>Complex BLE communication</li>
+                            <li>Flutter & Dart ecosystem</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- RIDECELL SDK -->
+                <div class="glass-panel project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Ridecell SDK</h3>
+                        <p>A comprehensive mobility SDK empowering car-sharing and ride-hailing startups to launch
+                            rapidly.</p>
+                        <ul class="job-list" style="margin-top: 1rem;">
+                            <li>Kotlin Multiplatform Architecture</li>
+                            <li>Offline Data Synchronization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="fade-up delay-3">
+            <h2 class="section-header">Expertise</h2>
+
+            <div class="skills-grid">
+                <div class="glass-panel skill-group">
+                    <h3>Languages & Frameworks</h3>
+                    <p>Kotlin, Java, Dart, Swift, Python, Javascript (TypeScript). Flutter, React Native, KMM, Jetpack
+                        Compose.</p>
+                </div>
+
+                <div class="glass-panel skill-group">
+                    <h3>Architecture & Engineering</h3>
+                    <p>MVVM, MVI, Clean Architecture, SOLID, Design Patterns, TDD, CI/CD pipelines, Git Flow.</p>
+                </div>
+
+                <div class="glass-panel skill-group">
+                    <h3>Leadership</h3>
+                    <p>Agile / Scrum, Mentorship, Cross-functional alignment, Code Reviewing, Technical Roadmapping.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple script to close sidebar on mobile when link is clicked
+        function closeSidebar() {
+            if (window.innerWidth <= 768) {
+                document.querySelector('.sidebar').classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
