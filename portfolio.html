@@ -195,6 +195,24 @@
             justify-content: center;
             align-items: center;
             min-width: 250px;
+            position: relative;
+        }
+
+        .static-noise {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.3) 2px, rgba(0, 0, 0, 0.3) 4px);
+            background-size: 100% 4px;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+            z-index: 5;
+            animation: tvStatic 0.2s steps(2, end) infinite, fadeOutLoad 2s cubic-bezier(0.8, 0, 1, 1) forwards;
+            opacity: 1;
+            transform: skew(-2deg);
+            max-height: 450px;
         }
 
         .hero-image {
@@ -206,7 +224,9 @@
             max-height: 450px;
             object-fit: cover;
             background-color: var(--bg-color);
-            animation: tvGlitch 4s infinite linear;
+            animation: tvGlitch 4s infinite linear, imageLoad 1.5s ease-out forwards;
+            position: relative;
+            z-index: 4;
         }
 
         .hero h1 {
@@ -720,6 +740,45 @@
                 filter: none;
             }
         }
+
+        @keyframes tvStatic {
+            0% {
+                transform: skew(-2deg) translate(0, 0);
+            }
+
+            50% {
+                transform: skew(-2deg) translate(0, 2px);
+            }
+
+            100% {
+                transform: skew(-2deg) translate(0, 0);
+            }
+        }
+
+        @keyframes fadeOutLoad {
+            0% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes imageLoad {
+            0% {
+                filter: contrast(3) brightness(5) grayscale(1);
+            }
+
+            100% {
+                filter: none;
+            }
+        }
     </style>
 </head>
 
@@ -762,6 +821,7 @@
                     </div>
                 </div>
                 <div class="hero-image-container fade-in delay-2">
+                    <div class="static-noise"></div>
                     <img src="assets/assets/1.png" alt="Aniruddha Kadam" class="hero-image border-element">
                 </div>
             </div>
