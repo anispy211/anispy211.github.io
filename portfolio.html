@@ -206,7 +206,7 @@
             max-height: 450px;
             object-fit: cover;
             background-color: var(--bg-color);
-            animation: mangaFloat 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            animation: tvGlitch 4s infinite linear;
         }
 
         .hero h1 {
@@ -666,28 +666,57 @@
             }
         }
 
-        @keyframes mangaFloat {
+        @keyframes tvGlitch {
 
             0%,
             100% {
                 transform: skew(-2deg) translateY(0);
-                box-shadow: 12px 12px 0 var(--text-main);
+                filter: none;
             }
 
-            48% {
-                transform: skew(-2deg) translateY(-15px);
-                box-shadow: 20px 20px 0 var(--text-main);
+            2%,
+            64% {
+                transform: skew(-2deg) translateY(0);
+                filter: none;
             }
 
-            50% {
-                transform: skew(-10deg) translateY(-15px) translate(-5px, 5px);
-                box-shadow: 10px 10px 0 var(--text-main);
-                filter: brightness(1.2) contrast(1.5) invert(0.2);
+            65% {
+                transform: skew(-15deg) translate(-10px, 0);
+                filter: contrast(2.5) brightness(1.5) invert(1);
             }
 
-            52% {
-                transform: skew(-2deg) translateY(-15px);
-                box-shadow: 20px 20px 0 var(--text-main);
+            66% {
+                transform: skew(10deg) translate(10px, 2px);
+                filter: contrast(2) brightness(0.5);
+            }
+
+            67% {
+                transform: skew(-5deg) translate(-5px, -2px);
+                filter: contrast(1.5) invert(0.2);
+            }
+
+            68% {
+                transform: skew(-2deg) translateY(0);
+                filter: none;
+            }
+
+            85% {
+                transform: skew(-2deg) translateY(0);
+                filter: none;
+            }
+
+            86% {
+                transform: skew(-5deg) translate(5px, 0);
+                filter: brightness(1.5);
+            }
+
+            87% {
+                transform: skew(5deg) translate(-5px, 0);
+                filter: contrast(0.5);
+            }
+
+            88% {
+                transform: skew(-2deg) translateY(0);
                 filter: none;
             }
         }
